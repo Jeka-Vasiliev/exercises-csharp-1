@@ -17,7 +17,7 @@ ENV PATH=/root/.dotnet/tools:$PATH
 
 COPY src/ src/
 
-RUN dotnet script src/Warmup.csx
+RUN dotnet publish -c Release -o bin/out ./src/ScriptExecutor/
 
 COPY . .
 
